@@ -61,7 +61,7 @@ const info = {
         "Built a Todo List web app using React, Redux Toolkit, and Tailwind CSS Users can add, update, and delete tasks, with state management and a responsive UI.",
       technologies: "React, ReduxToolkit, Tailwind",
       github: "https://github.com/usma1122/Todolist",
-      link: "",
+      link: "https://todolist-theta-lake.vercel.app/",
     },
     {
       title: "Exchange Currency App",

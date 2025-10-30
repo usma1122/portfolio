@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 
 function Hero() {
   return (
-    <section id="hero" className="pb-28 pt-24 sm:pt-28 md:pt-44 flex px-6 lg:px-24">
+    <section id="hero" className="pb-28 pt-20 sm:pt-28 md:pt-44 flex px-6 lg:px-24">
       <div className="self-center">
         <div className="hs-tooltip [--placement:right] w-20 hs-tooltip-toggle">
           <img

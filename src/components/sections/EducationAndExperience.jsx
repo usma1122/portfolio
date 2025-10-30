@@ -6,19 +6,30 @@ function EducationAndExperience() {
   return (
     <section
       id="education-and-experience"
-      className="mt-20 mx-4 lg:mx-20 flex flex-col md:flex-row gap-4 md:gap-2"
+      className="mt-8 py-16 mx-4 lg:mx-20"
     >
-      {/* =========== EDUCATION =========== */}
-      <div className="w-full md:w-[80%]">
-        {/* =========== EDUCATION TITLE =========== */}
-        <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
-          <FaLandmark className="text-xl text-red-800 dark:text-red-500" />
-          Education
-        </h4>
+      {/* ===== MAIN HEADING ===== */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+          Education & Experience
+        </h2>
+        <p className="mt-3 text-zinc-600 dark:text-zinc-400 text-base md:text-lg">
+          My academic background and professional journey as a developer.
+        </p>
+      </div>
 
-        {/* =========== EDUCATION LIST =========== */}
-        {user_info.education.map((edu, index) => {
-          return (
+      {/* ===== CONTENT ===== */}
+      <div className="flex flex-col md:flex-row gap-8 md:gap-4">
+        {/* =========== EDUCATION =========== */}
+        <div className="w-full md:w-[80%]">
+          {/* =========== EDUCATION TITLE =========== */}
+          <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
+            <FaLandmark className="text-xl text-red-800 dark:text-red-500" />
+            Education
+          </h4>
+
+          {/* =========== EDUCATION LIST =========== */}
+          {user_info.education.map((edu, index) => (
             <div key={index}>
               {/* =========== DURATION =========== */}
               <div className="ps-2 my-2 first:mt-0 !mt-2">
@@ -35,7 +46,6 @@ function EducationAndExperience() {
                 </div>
 
                 <div className="grow p-2 pb-8">
-                  {/* =========== IMAGE AND SCHOOL NAME =========== */}
                   <h3 className="flex items-center gap-x-2 font-semibold text-zinc-800 dark:text-white">
                     <img
                       className="w-9 h-9 rounded-full"
@@ -44,7 +54,6 @@ function EducationAndExperience() {
                     />
                     <div className="leading-5">
                       {edu.school}
-                      {/* =========== DEGREE =========== */}
                       <p className="font-normal text-xs text-zinc-600 dark:text-zinc-400">
                         {edu.degree}
                       </p>
@@ -53,22 +62,19 @@ function EducationAndExperience() {
                 </div>
               </div>
             </div>
-          );
-        })}
-      </div>
+          ))}
+        </div>
 
-      {/* =========== EXPERIENCE =========== */}
-      <div className="w-full">
-        {/* =========== EXPERIENCE TITLE =========== */}
-        <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
-          <FaBuildingUser className="text-2xl text-red-800 dark:text-red-500" />
-          Experience
-        </h4>
+        {/* =========== EXPERIENCE =========== */}
+        <div className="w-full">
+          {/* =========== EXPERIENCE TITLE =========== */}
+          <h4 className="text-xl dark:text-white mb-4 font-bold flex gap-2 items-center">
+            <FaBuildingUser className="text-2xl text-red-800 dark:text-red-500" />
+            Experience
+          </h4>
 
-        <div className="md:h-[480px] md:overflow-y-scroll scroll-smooth">
-          {/* =========== EXPERIENCE LIST =========== */}
-          {user_info.experience.map((exp, index) => {
-            return (
+          <div className="md:h-[480px] md:overflow-y-scroll scroll-smooth">
+            {user_info.experience.map((exp, index) => (
               <div key={index}>
                 <div className="ps-2 my-2 first:mt-0 !mt-2">
                   <h3 className="text-xs font-medium uppercase text-zinc-500 dark:text-zinc-400">
@@ -84,7 +90,6 @@ function EducationAndExperience() {
                   </div>
 
                   <div className="grow p-2 pb-8">
-                    {/* =========== COMPANY NAME =========== */}
                     <h3 className="flex items-center gap-x-2 font-semibold text-zinc-800 dark:text-white">
                       <img
                         className="w-9 rounded-full"
@@ -93,7 +98,6 @@ function EducationAndExperience() {
                       />
                       <div className="leading-5">
                         {exp.company}
-                        {/* =========== POSITION =========== */}
                         <p className="font-normal text-xs text-zinc-600 dark:text-zinc-400">
                           {exp.position}
                         </p>
@@ -101,36 +105,33 @@ function EducationAndExperience() {
                     </h3>
 
                     <ul className="list-disc list-inside text-zinc-800 dark:text-white mt-2">
-                      {/* =========== DESCRIPTION LIST =========== */}
-                      {exp.descriptions.map((desc, index) => {
-                        return (
-                          <li className="flex space-x-3" key={index}>
-                            <svg
-                              className="flex-shrink-0 size-4 mt-0.5 text-red-800 dark:text-red-500"
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="24"
-                              height="24"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
-                              {desc}
-                            </span>
-                          </li>
-                        );
-                      })}
+                      {exp.descriptions.map((desc, index) => (
+                        <li className="flex space-x-3" key={index}>
+                          <svg
+                            className="flex-shrink-0 size-4 mt-0.5 text-red-800 dark:text-red-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                          <span className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                            {desc}
+                          </span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </section>
